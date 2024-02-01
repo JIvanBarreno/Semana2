@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+}
+
+.container, .bloque {
+    padding: 15px;
+    margin: 5px;
+    border-style:solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+}
+
+.bloque {
+    border-color: rgb(25, 12, 145);
+}
