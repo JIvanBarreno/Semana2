@@ -112,6 +112,69 @@ function ej4Edad() {
 
 function ej5Hilera () {
     let inputFrase = document.getElementById("text-sentence").value;
+    let splitValues = inputFrase.split(/[\s]+/);
+    let resultOutObject = document.getElementById("ej5-result");
+    let cantWords = splitValues.length;
+    let result = `<p> La frase cuenta con <b>${cantWords}</b> palabras. </p>`;
 
-    console.log(inputFrase);
+    //console.log(splitValues);
+    //console.log(cantWords);
+
+    resultOutObject.innerHTML = result;
+}
+
+var numberList = [];
+
+function ej6List() {
+    let inputNumber = document.getElementById("ej6-number");
+    let listNumber = document.getElementById("list-numbers");
+    let itemsList = "";
+
+    
+    if (inputNumber.value === "") {
+        alert("Debe ingresar un numero.")
+    } else {
+        numberList.push(parseInt(inputNumber.value));
+        
+        numberList.forEach(item => {
+            itemsList += `<li> ${item} </li>`;
+        });
+    
+        listNumber.innerHTML = itemsList;
+    }
+
+    inputNumber.value = null;
+}
+
+function ej6CalAVG() {
+    let divResult = document.getElementById("ej6-result");
+    let avgResult = 0;
+    let i = 0;
+    let itemsList = 0;
+
+    if (numberList.length > 0) {
+        numberList.forEach(item => {
+            itemsList += item;
+            i++;
+        });
+        
+        avgResult = itemsList / i;
+        divResult.innerHTML = `<p> El promedio es: <b>${avgResult}</b> </p>`;
+    } else {
+        alert("La Lista esta vacia.")
+    }
+}
+
+function ej7Color() {
+    let inputColor = document.getElementById("ej7-color").value;
+    let divSquare = document.getElementById("ej7-result");
+    let bgColor = 0;
+
+    const r = parseInt(inputColor.substr(1,2), 16);
+    const g = parseInt(inputColor.substr(3,2), 16);
+    const b = parseInt(inputColor.substr(5,2), 16);
+
+    bgColor = `rgb(${r}, ${g}, ${b})`;
+
+    divSquare.style.backgroundColor = bgColor;
 }

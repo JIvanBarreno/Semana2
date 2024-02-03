@@ -69,11 +69,42 @@
             <div class="bloque">
                 <h1>Ejercicio 5</h1>
                 <label for="text-sentence">Frase</label>
-                <input type="text" name="text-sentence" id="text-sentence">
+                <br>
+                <textarea name="text-sentence" id="text-sentence" cols="30" rows="3"></textarea>
                 <button onclick="ej5Hilera()">Calcular # palabras</button>
                 <p></p>
-                <label for="ej5-result">La cantidad de palabras es: </label>
-                <input type="number" name="ej5-result" id="ej5-result">
+                <div id="ej5-result">
+                    
+                </div>
+            </div>
+
+            <div class="bloque">
+                <h1>Ejercicio 6</h1>
+                <label for="ej6-number">Ingrese un numero: </label>
+                <input type="number" name="ej6-number" id="ej6-number">
+                <button onclick="ej6List()">Agregar a la lista</button>
+                <p></p>
+                <ul id="list-numbers">
+
+                </ul>
+                <hr>
+                <p></p>
+                <button onclick="ej6CalAVG()">Calcular promedio</button>
+                <div id="ej6-result">
+                    
+                </div>
+            </div>
+
+            <div class="bloque">
+                <h1>Ejercicio 7</h1>
+                <label for="ej7-color">Seleccione un color: </label>
+                <input type="color" name="ej7-color" id="ej7-color">
+                <button onclick="ej7Color()">Aplicar el color</button>
+                <p></p>
+                
+                <div id="ej7-result">
+                    
+                </div>
             </div>
 
         </div>
